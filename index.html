@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>String Manipulations!</h1>
+        <input type="text" v-model.lazy="newWord">
+        <button  class="btn btn-success"> Show</button>
+
+        <ol>
+            <li> {{ newWord }} </li>
+            <li> {{ newWord.toLowerCase() }}</li>
+            <li> {{ newWord.toUpperCase() }}</li>
+            <li> {{ capitalizeFirstLetter(newWord) }} </li>
+            <li> {{ capitalizeLastLetter(newWord) }}</li>
+            <li> {{ reverse(newWord) }}</li>
+
+        </ol>
+        <table class=table table-stripes>
+            <tr>
+                <th> Your word! </th>
+                <th> Lower case! </th>
+                <th> Upper case! </th>
+                <th> Capitalized! </th>
+                <th> End capitalized! </th>
+            </tr>
+            <tr>
+                <td>{{ newWord }}</td>
+                <td>{{ newWord.toLowerCase() }}</td>
+                <td>{{ newWord.toUpperCase() }}</td>
+                <td>{{ capitalizeFirstLetter(newWord) }}</td>
+                <td>{{ capitalizeLastLetter(newWord) }}</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
