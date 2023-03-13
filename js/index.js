@@ -4,13 +4,14 @@ Vue.createApp({
         return {
             newWord: '',
             userInput: "",
+            
       
         }
 
     },
 
     methods: {
-        
+      
           capitalizeFirstLetter(words) {
             return words.charAt(0).toUpperCase() + words.slice(1);
           },
@@ -22,6 +23,12 @@ Vue.createApp({
             return word.split('').reverse().join('');
                 
             },
+
+            showResult(){
+              if (this.newWord === ''){
+                alert('Please enter a word first')
+              }
+            }
     },
     }).mount("#app")
 

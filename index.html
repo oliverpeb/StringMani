@@ -14,7 +14,9 @@
     <div id="app">
         <h1>String Manipulations!</h1>
         <input type="text" v-model.lazy="newWord">
-        <button  class="btn btn-success"> Show</button>
+        <button  class="btn btn-success" @click="showResult">Show</button>
+
+        
 
         <ol>
             <li> {{ newWord }} </li>
